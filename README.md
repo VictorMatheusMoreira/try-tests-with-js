@@ -9,3 +9,7 @@ npm i vitest -D // framework para fazer os testes
  
  para rodar : npm run test
 
+ diagramas de casos de uso ????
+ funcionalidades da aplicacao
+
+

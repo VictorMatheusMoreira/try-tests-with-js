@@ -3,10 +3,15 @@ import { Appointment } from './appointment'
 import { expect } from 'chai'
 
 test('create an appointment', () => {
+    const startsAt= new Date()
+    const endsAt  = new Date()
+
+    endsAt.setDate(endsAt.getDate() +1 )
+
     const appointment = new Appointment({
         customer: 'john doe',
-        startsAt: new Date(),
-        endsAt: new Date(),
+        startsAt,
+        endsAt
     })
 
     expect(appointment).instanceOf(Appointment)
@@ -20,9 +25,12 @@ test('cannot create an appointment with end date before start date', () => {
 
     endsAt.setDate(endsAt.getDate() -1 )
     
-    const appointment = new Appointment({
-        customer: 'john doe',
-        startsAt: new Date(),
-        endsAt: new Date(),
-    })
+    expect(() => {
+        return new Appointment({
+            customer: 'john doe',
+            startsAt,
+            endsAt
+        })
+    }).throw()
+    
 })
