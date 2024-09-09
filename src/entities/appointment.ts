@@ -5,6 +5,9 @@ interface AppointmentProps {
 }
 
 export class Appointment {
+    execute(arg0: { custome: string; startsAt: Date; endsAt: Date; }): any {
+        throw new Error('Method not implemented.');
+    }
     private props: AppointmentProps;
 
     get customer() {
