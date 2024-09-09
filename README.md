@@ -12,4 +12,6 @@ npm i vitest -D // framework para fazer os testes
  diagramas de casos de uso ????
  funcionalidades da aplicacao
 
+ 3844
+
 
