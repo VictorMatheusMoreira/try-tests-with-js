@@ -5,5 +5,7 @@ npm init -y
 
 npx eslint --init
 
-
+npm i vitest -D // framework para fazer os testes
+ 
+ para rodar : npm run test
 
